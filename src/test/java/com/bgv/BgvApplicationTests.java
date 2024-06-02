@@ -1,10 +1,10 @@
-package com.personal;
+package com.bgv;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PersonalApplicationTests {
+class BgvApplicationTests {
 
 	@Test
 	void contextLoads() {
