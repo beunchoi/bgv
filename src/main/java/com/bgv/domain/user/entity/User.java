@@ -1,5 +1,7 @@
 package com.bgv.domain.user.entity;
 
+import com.bgv.domain.user.dto.ProfileRequestDto;
+import com.bgv.domain.user.dto.SignupRequestDto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,25 +40,10 @@ public class User {
   @Column(nullable = false)
   private boolean active = true;
 
-  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-  private Set<UserBoard> userBoards = new HashSet<>();
-
   public User(SignupRequestDto request, String password) {
     this.username = request.getUsername();
     this.email = request.getEmail();
     this.password = password;
-  }
-  public User(Long userId, SignupRequestDto request) {
-    this.userId = userId;
-    this.username = request.getUsername();
-    this.email = request.getEmail();
-    this.password = request.getPassword();
-  }
-
-  public User(SignupRequestDto request) {
-    this.username = request.getUsername();
-    this.email = request.getEmail();
-    this.password = request.getPassword();
   }
 
   public void updateProfile(ProfileRequestDto request) {

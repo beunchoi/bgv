@@ -1,10 +1,14 @@
 package com.bgv.domain.user.controller;
 
 import com.bgv.domain.user.dto.LoginRequestDto;
+import com.bgv.domain.user.dto.ProfileRequestDto;
+import com.bgv.domain.user.dto.ProfileResponseDto;
 import com.bgv.domain.user.dto.SignupRequestDto;
 import com.bgv.domain.user.service.UserService;
 import com.bgv.global.common.ResponseDto;
+import com.bgv.global.jwt.UserDetailsImpl;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
