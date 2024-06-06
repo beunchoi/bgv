@@ -4,7 +4,6 @@ spring:
     username: beunchoi
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     hibernate:
      ddl-auto: update
@@ -13,6 +12,7 @@ spring:
         show_sql: true
         format_sql: true
         use_sql_comments: true
+        dialect: org.hibernate.dialect.MySQLDialect
 
 jwt:
   header: Authorization
