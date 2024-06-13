@@ -36,7 +36,7 @@ public class MovieOpenApi {
         .fromUriString("http://www.kobis.or.kr")
         .path("/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json")
         .queryParam("key", "4e7665b7652f0edab0b200ae7ec79726")
-        .queryParam("targetDt", "20240613")
+        .queryParam("targetDt", formattedDate)
         .encode()
         .build()
         .toUri();
