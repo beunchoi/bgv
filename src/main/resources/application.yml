@@ -20,3 +20,5 @@ jwt:
   token-validity-in-seconds: 86400
 
 movie_apikey: 4e7665b7652f0edab0b200ae7ec79726
+
+secret_key: DEV831E66B123DCF0DF60DEC9229287FA6E67056
